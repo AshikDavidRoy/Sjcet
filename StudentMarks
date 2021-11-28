@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    float M1, M2, M3, Tot, avge;
+    int roll;
+    Scanner sc = new Scanner (System.in);
+      System.out.println ("Enter the Roll No of the Student : ");
+      roll = sc.nextInt ();
+      System.out.println ("Enter the Mark Of the  First Subject  : ");
+      M1 = sc.nextFloat ();
+      System.out.println ("Enter the Mark Of the  Second Subject  : ");
+      M2 = sc.nextFloat ();
+      System.out.println ("Enter the Mark Of the  Third Subject  : ");
+      M3 = sc.nextFloat ();
+
+      Tot = M1 + M2 + M3;
+
+      avge = Tot / 3;
+
+      System.out.println ("The Total Marks of all the Subject is  : " + Tot);
+      System.out.println ("The Average Marks of all the Subject is  : " +
+			  avge);
+  }
+}
