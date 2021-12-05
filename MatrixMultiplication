@@ -1,0 +1,62 @@
+package Ext;
+import java.util.Scanner;
+public class MM1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int r,c,i,j,k,sum;
+		Scanner in = new Scanner(System.in);
+		 
+		System.out.println("Enter the number of rows of matrix : ");
+		r = in.nextInt();
+		 
+		System.out.println("Enter the number columns of matrix : ");
+		c = in.nextInt();
+
+		 
+		int mat1[][] = new int[r][c]; 
+		int mat2[][] = new int[r][c]; 
+		int res[][] = new int[r][c];
+		 
+		System.out.println("Enter the elements of First matrix : ");
+		 
+		for ( i= 0 ; i < r ; i++ )
+		{ 
+		 
+		for ( j= 0 ; j < c ;j++ )
+		mat1[i][j] = in.nextInt();
+		 
+		}
+		System.out.println("Enter the elements of Second matrix : ");
+		 
+		for ( i= 0 ; i < r ; i++ )
+		{ 
+		 
+		for ( j= 0 ; j < c;j++ )
+		mat2[i][j] = in.nextInt();
+		 
+		}
+		 
+		System.out.println("\n\noutput matrix:-");
+		for ( i= 0 ; i < r ; i++ )
+		 
+		for ( j= 0 ; j <c;j++)
+		{
+		sum=0;
+		for ( k= 0 ; k <r;k++ )
+		{
+		sum +=mat1[i][k]*mat2[k][j] ;
+		 
+		}
+		res[i][j]=sum;
+		}
+		for ( i= 0 ; i < r; i++ )
+		{
+		for ( j=0 ; j < c;j++ )
+		System.out.print(res[i][j]+" ");
+		 
+		System.out.println();
+		}
+
+	}
+}
